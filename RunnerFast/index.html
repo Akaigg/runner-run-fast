@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="./assets/css/reset.css">
+    <link rel="stylesheet" href="./assets/css/areaJogo.css">
+    <link rel="stylesheet" href="./assets/css/menu.css">
+    <link rel="stylesheet" href="./assets/css/popUp.css">
+    <link rel="stylesheet" href="./assets/css/obstaculos/obstaculos.css">
+    <link rel="stylesheet" href="./assets/css/powerUp.css">
+    <link rel="stylesheet" href="./assets/css/player.css">
+    <link rel="stylesheet" href="./assets/css/nuvens.css">
+    <link rel="stylesheet" href="./assets/css/pontosExtras.css">
+    <link rel="stylesheet" href="./assets/css/feedback.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" href="./assets/img/pontosExtras/sustentabilidade.png"/>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <title>Run Fast</title>
+</head>
+<body>
+    <div class="menu">
+        <div class="menu__items">
+            <div class="buttonMenu">Começar jogo</div>
+            <div class="buttonMenu buttonCreditos">Equipe</div>
+        </div>
+    </div>
+    <div class="containerPopUpTutorial">
+        <div class="popUpTutorial">
+            <h2>Como jogar</h2>
+            <div class="popUpTutorial__ContentWrapper">
+                <div class="popUpTutorial__ContentWrapper__box popUpTutorial__ContentWrapper__box--gifPomba">
+                    <div style="border: 4px solid black;">
+                        <video width="200px" height="201px" loop autoplay muted> 
+                            <source src="./assets/img/menu/gifPomba.mp4">
+                        </video>
+                    </div>
+                    <p class="popUpTutorial__ContentWrapper__box__text">
+                        Desvie dos obstáculos utilizando as teclas WASD e acumule o máximo de energia possível!
+                    </p>
+                </div>
+                <div class="popUpTutorial__ContentWrapper__box">
+                    <div style="background: white; width: 100%; height: 201px; border: 4px solid black;">
+                        <video style="height: 196px"  height="199px" loop autoplay muted> 
+                            <source src="./assets/img/menu/gifPowerUp.mp4">
+                        </video>
+                    </div>
+                    <p class="popUpTutorial__ContentWrapper__box__text"> 
+                        Pegue os power ups para ganhar mais energia ao longo do tempo e ajudar o meio-ambiente!
+                    </p>
+                </div>
+                <div class="popUpTutorial__ContentWrapper__box">
+                    <div style="background: white; width: 100%; height: 201px; border: 4px solid black;">
+                        <video style="height: 196px"  height="199px" loop autoplay muted> 
+                            <source src="./assets/img/menu/upxPontosExtras.mp4">
+                        </video>
+                    </div>
+                    <p class="popUpTutorial__ContentWrapper__box__text">
+                        Pegue os pontos extras que aparecem no cenário, se você possuir algum power up eles valem o dobro!
+                    </p>
+                </div>
+            </div>
+            <button class="popUpTutorialButton buttonStart">Jogar!</button>
+        </div>
+    </div>
+    <div class="containerPopUpCreditos">
+        <div class="popUpCreditos">
+            <h2>Equipe</h2>
+            <h3>Maria Luisa Rech</h3>
+            <h3>Marina Costa Moreira</h3>
+            <h3>Yasmin Antônia Kruger</h3>
+            <h3>Vitor Machado Blume</h3>
+        </div>
+    </div>
+    <div class="areajogo1">
+        <div class="player">
+            <div class="player--carroCombustao">
+                <img class="carro--1 sprite" src="./assets/img/spriteCarroCombustao/carro1.png" alt="">
+                <img class="carro--2 sprite" src="./assets/img/spriteCarroCombustao/carro2.png" alt="">
+                <img class="carro--3 sprite" src="./assets/img/spriteCarroCombustao/carro3.png" alt="">
+                <img class="carro--4 sprite" src="./assets/img/spriteCarroCombustao/carro4.png" alt="">
+            </div>
+            <div class="player--carroEletrico">
+                <img class="carroEletrico--1 sprite" src="./assets/img/spriteCarroEletrico/carroeletrico1.png" alt="">
+                <img class="carroEletrico--2 sprite" src="./assets/img/spriteCarroEletrico/carroeletrico2.png" alt="">
+                <img class="carroEletrico--3 sprite" src="./assets/img/spriteCarroEletrico/carroeletrico3.png" alt="">
+            </div>
+            <div class="player--andando">
+                <img class="playerWalking--1 sprite" src="./assets/img/spriteAndando/1.png" alt="">
+                <img class="playerWalking--2 sprite" src="./assets/img/spriteAndando/2.png" alt="">
+                <img class="playerWalking--3 sprite" src="./assets/img/spriteAndando/3.png" alt="">
+                <img class="playerWalking--4 sprite" src="./assets/img/spriteAndando/4.png" alt="">
+                <img class="playerWalking--5 sprite" src="./assets/img/spriteAndando/5.png" alt="">
+            </div>
+            <div class="player--bicicleta">
+                <img class="bicicleta--1 sprite" src="./assets/img/spriteBicicleta/bicicleta1.png" alt="">
+                <img class="bicicleta--2 sprite" src="./assets/img/spriteBicicleta/bicicleta2.png" alt="">
+                <img class="bicicleta--3 sprite" src="./assets/img/spriteBicicleta/bicicleta3.png" alt="">
+                <img class="bicicleta--4 sprite" src="./assets/img/spriteBicicleta/bicicleta4.png" alt="">
+            </div>
+            <div class="player--onibus">
+                <img class="onibus--1 sprite" src="./assets/img/spriteOnibus/onibus1.png" alt="">
+                <img class="onibus--2 sprite" src="./assets/img/spriteOnibus/onibus2.png" alt="">
+            </div>
+        </div>
+        <div class="nuvens">
+            <!-- Sujas -->
+            <div class="nuvens__poluidas__back">
+                <img class="nuvens__poluidas__back__nuvem--1 nuvem" src="./assets/img/nuvens/nuvemPoluida1.png" alt="">
+                <img class="nuvens__poluidas__back__nuvem--2 nuvem" src="./assets/img/nuvens/nuvemPoluida2.png" alt="">
+                <img class="nuvens__poluidas__back__nuvem--3 nuvem" src="./assets/img/nuvens/nuvemPoluida3.png" alt="">
+                <img class="nuvens__poluidas__back__nuvem--4 nuvem" src="./assets/img/nuvens/nuvemPoluida4.png" alt="">
+                <img class="nuvens__poluidas__back__nuvem--5 nuvem" src="./assets/img/nuvens/nuvemPoluida5.png" alt="">
+                <img class="nuvens__poluidas__back__nuvem--6 nuvem" src="./assets/img/nuvens/nuvemPoluida6.png" alt="">
+                <img class="nuvens__poluidas__back__nuvem--7 nuvem" src="./assets/img/nuvens/nuvemPoluida7.png" alt="">
+                <img class="nuvens__poluidas__back__nuvem--8 nuvem" src="./assets/img/nuvens/nuvemPoluida8.png" alt="">
+            </div>
+            <div class="nuvens__poluidas__front">
+                <img class="nuvens__poluidas__front__nuvem--1 nuvem" src="./assets/img/nuvens/nuvemPoluida1.png" alt="">
+                <img class="nuvens__poluidas__front__nuvem--2 nuvem" src="./assets/img/nuvens/nuvemPoluida2.png" alt="">
+                <img class="nuvens__poluidas__front__nuvem--3 nuvem" src="./assets/img/nuvens/nuvemPoluida3.png" alt="">
+                <img class="nuvens__poluidas__front__nuvem--4 nuvem" src="./assets/img/nuvens/nuvemPoluida4.png" alt="">
+                <img class="nuvens__poluidas__front__nuvem--5 nuvem" src="./assets/img/nuvens/nuvemPoluida5.png" alt="">
+                <img class="nuvens__poluidas__front__nuvem--6 nuvem" src="./assets/img/nuvens/nuvemPoluida6.png" alt="">
+                <img class="nuvens__poluidas__front__nuvem--7 nuvem" src="./assets/img/nuvens/nuvemPoluida7.png" alt="">
+                <img class="nuvens__poluidas__front__nuvem--8 nuvem" src="./assets/img/nuvens/nuvemPoluida8.png" alt="">
+            </div>
+            <!-- Limpas -->
+            <div class="nuvens__limpas__back">
+                <img class="nuvens__limpas__back__nuvem--1 nuvem" src="./assets/img/nuvens/nuvemLimpa1.png" alt="">
+                <img class="nuvens__limpas__back__nuvem--2 nuvem" src="./assets/img/nuvens/nuvemLimpa2.png" alt="">
+                <img class="nuvens__limpas__back__nuvem--3 nuvem" src="./assets/img/nuvens/nuvemLimpa3.png" alt="">
+                <img class="nuvens__limpas__back__nuvem--4 nuvem" src="./assets/img/nuvens/nuvemLimpa4.png" alt="">
+                <img class="nuvens__limpas__back__nuvem--5 nuvem" src="./assets/img/nuvens/nuvemLimpa5.png" alt="">
+                <img class="nuvens__limpas__back__nuvem--6 nuvem" src="./assets/img/nuvens/nuvemLimpa6.png" alt="">
+                <img class="nuvens__limpas__back__nuvem--7 nuvem" src="./assets/img/nuvens/nuvemLimpa7.png" alt="">
+                <img class="nuvens__limpas__back__nuvem--8 nuvem" src="./assets/img/nuvens/nuvemLimpa8.png" alt="">
+            </div>
+            <div class="nuvens__limpas__front">
+                <img class="nuvens__limpas__front__nuvem--1 nuvem" src="./assets/img/nuvens/nuvemLimpa1.png" alt="">
+                <img class="nuvens__limpas__front__nuvem--2 nuvem" src="./assets/img/nuvens/nuvemLimpa2.png" alt="">
+                <img class="nuvens__limpas__front__nuvem--3 nuvem" src="./assets/img/nuvens/nuvemLimpa3.png" alt="">
+                <img class="nuvens__limpas__front__nuvem--4 nuvem" src="./assets/img/nuvens/nuvemLimpa4.png" alt="">
+                <img class="nuvens__limpas__front__nuvem--5 nuvem" src="./assets/img/nuvens/nuvemLimpa5.png" alt="">
+                <img class="nuvens__limpas__front__nuvem--6 nuvem" src="./assets/img/nuvens/nuvemLimpa6.png" alt="">
+                <img class="nuvens__limpas__front__nuvem--7 nuvem" src="./assets/img/nuvens/nuvemLimpa7.png" alt="">
+                <img class="nuvens__limpas__front__nuvem--8 nuvem" src="./assets/img/nuvens/nuvemLimpa8.png" alt="">
+            </div>
+        </div>
+        <div class="obstaculos">
+            <!-- Começo obstaculos cidade suja -->
+            <div class="sacoDeLixo01">
+                <img src="./assets/img/obstaculos/SacoDeLixo00.png" alt="">
+            </div>
+            <div class="sacoDeLixo02">
+                <img src="./assets/img/obstaculos/SacoDeLixo01.png" alt="">
+            </div>
+            <div class="pomba">
+                <img class="pomba00" src="./assets/img/obstaculos/Pomba00.png" alt="">
+                <img class="pomba01" src="./assets/img/obstaculos/Pomba01.png" alt="">
+                <img class="pomba02" src="./assets/img/obstaculos/Pomba02.png" alt="">
+                <img class="pomba03" src="./assets/img/obstaculos/Pomba03.png" alt="">
+            </div>
+            <div class="rato">
+                <img src="./assets/img/obstaculos/Rato00.png" alt="">
+            </div>
+            <!-- Começo obstaculos cidade limpa -->
+            <div class="cone">
+                <img src="./assets/img/obstaculos/Cone00.png" alt="">
+            </div>
+            <div class="hidrante">
+                <img src="./assets/img/obstaculos/Hidrante00.png" alt="">
+            </div>
+            <div class="placaSubwaySurfers">
+            </div>
+            <!-- Começo obstaculos ciclovia -->
+            <div class="passarinho">
+                <img class="passarinho00" src="./assets/img/obstaculos/Passarinho00.png" alt="">
+                <img class="passarinho01" src="./assets/img/obstaculos/Passarinho01.png" alt="">
+                <img class="passarinho02" src="./assets/img/obstaculos/Passarinho02.png" alt="">
+                <img class="passarinho03" src="./assets/img/obstaculos/Passarinho03.png" alt="">
+            </div>
+            <!-- fim obstaculos cidade limpa -->
+            <div class="pedra01">
+                <img src="./assets/img/obstaculos/Pedra00.png" alt="">
+            </div>
+            <div class="pedra02">
+                <img src="./assets/img/obstaculos/Pedra01.png" alt="">
+            </div>
+            <div class="banco"></div>
+            <div class="tronco"></div>
+            <!-- Fim obstaculos  ciclobia -->
+        </div>
+        <div class="powerUps">
+            <div class="powerUp--bicicleta"></div>
+            <div class="powerUp--onibus"></div>
+            <div class="powerUp--carroEletrico">
+                <div class="powerUp--carroEletrico00">
+                    <img src="./assets/img/powerUp/carroEletrico.png" alt="">
+                </div>
+                <div class="powerUp--carroEletrico01">
+                    <img src="./assets/img/powerUp/carroEletrico01.png" alt="">
+                </div>
+                <div class="powerUp--carroEletrico02">
+                    <img src="./assets/img/powerUp/carroEletrico02.png" alt="">
+                </div>
+                <div class="powerUp--carroEletrico03">
+                    <img src="./assets/img/powerUp/carroEletrico03.png" alt="">
+                </div>
+                <div class="powerUp--carroEletrico04">
+                    <img src="./assets/img/powerUp/carroEletrico04.png" alt="">
+                </div>
+                <div class="powerUp--carroEletrico05">
+                    <img src="./assets/img/powerUp/carroEletrico05.png" alt="">
+                </div>
+                <div class="powerUp--carroEletrico06">
+                    <img src="./assets/img/powerUp/carroEletrico06.png" alt="">
+                </div>
+                <div class="powerUp--carroEletrico07">
+                    <img src="./assets/img/powerUp/carroEletrico07.png" alt="">
+                </div>
+            </div>
+            <div class="powerUp--caminhada"></div>
+            <div class="powerUpAudios">
+                <audio loop class="musicaCarroCombustao" src="./assets/audio/musicaCarroCombustao.m4a"></audio>
+                <audio loop class="musicaCarroEletrico" src="./assets/audio/musicaCarroEletrico.m4a"></audio>
+                <audio loop class="musicaOnibus" src="./assets/audio/musicaOnibus.m4a"></audio>
+                <audio loop class="musicaBicicleta" src="./assets/audio/musicaBicicleta.m4a"></audio>
+                <audio loop class="musicaCaminhada" src="./assets/audio/musicaCaminhada.m4a"></audio>
+                <audio class="efeitoSonoroPowerUp" src="./assets/audio/powerUp.mp3"></audio>
+            </div>
+        </div>
+        <div class="pontosExtras">
+            <div class="estrela"></div>
+            <div class="sustentabilidade">
+                <div class="pontosExtras pontosExtras--sustentabilidade">
+                    <img src="./assets/img/pontosExtras/sustentabilidade.png" alt="">
+                </div>
+            </div>
+            <div class="cereja">
+                <div class="pontosExtras pontosExtras--cereja00">
+                    <img src="./assets/img/pontosExtras/Cereja00.png" alt="">
+                </div>
+                <div class="pontosExtras pontosExtras--cereja01">
+                    <img src="./assets/img/pontosExtras/Cereja01.png" alt="">
+                </div>
+                <div class="pontosExtras pontosExtras--cereja02">
+                    <img src="./assets/img/pontosExtras/Cereja02.png" alt="">
+                </div>
+                <div class="pontosExtras pontosExtras--cereja03">
+                    <img src="./assets/img/pontosExtras/Cereja03.png" alt="">
+                </div>
+                <div class="pontosExtras pontosExtras--cereja04">
+                    <img src="./assets/img/pontosExtras/Cereja04.png" alt="">
+                </div>
+            </div>
+            <div class="scoreEstrela">+50</div>
+            <div class="scoreEstrela2x">+100</div>
+            <div class="scoreSustentabilidade2x">+50</div>
+            <div class="scoreSustentabilidade">+25</div>
+            <div class="scoreCereja2x">+20</div>
+            <div class="scoreCereja">+10</div>
+            <audio class="audioPontoExtra" src="./assets/audio/pontoExtra.m4a"></audio>
+        </div>
+        <div class="pontuacaoTimeBar"></div>
+        <div class="pontuacao"><span class="pontuacao2x">2x</span>Energia: 0</div>
+        <audio src="./assets/audio/gameOver.mp3" class="audioGameOver"></audio>
+    </div>
+    <div class="containerPopUpRestart">
+        <div class="popUp">
+            <h2 class="popUpTitle">Game over!!</h2>
+            <span class="popUpScorePlaceholder">Energia: 0</span>
+            <p class="popUpMensagemPosGameOver">Você pode melhorar, procure trocar para um meio de transporte sustentável para pontuar mais e ajudar o meio ambiente!!</p>
+            <button class="buttonStart buttonPopUp" disabled>Recomeçar</button>
+            <a class="mostrarPopUpFeedback">Feedback</a>
+        </div>
+        <div class="feedbackPopUp">
+            <h2>Responda algumas perguntas para ajudar na melhoria do jogo!</h2>
+            <form id="my-form" style="margin-top: 20px" action="" method="POST">
+                <!-- Question1 -->
+                <label for="question1"><span>1.</span> Qual o melhor de tipo de meio de transporte</label>
+                <div class="feedbackPopUp__questionRadio">
+                    <input type="radio" checked id="CarroNormal" name="meioDeTransporteFavorito" value="Carro Normal">
+                    <label for="Carro">Carro normal</label>
+                    <input type="radio" id="Onibus" name="meioDeTransporteFavorito" value="Onibus">
+                    <label for="Onibus">Onibus</label>
+                    <input type="radio" id="Bicicleta" name="meioDeTransporteFavorito" value="Bicicleta">
+                    <label for="Bicicleta">Bicicleta</label>
+                    <input type="radio" id="Caminhada" name="meioDeTransporteFavorito" value="Caminhada">
+                    <label for="Caminhada">Caminhada</label>
+                    <input type="radio" id="CarroEletrico" name="meioDeTransporteFavorito" value="CarroEletrico">
+                    <label for="CarroEletrico">Carro elétrico</label>
+                </div>
+                <!-- Question 2 -->
+                <label for="question2"><span>2.</span> Em uma escala de 0 a 10, quão bem os diferentes veiculos funcionaram:</label>
+                <div class="range">
+                    <input type="range" name="Veiculos" min="0" max="10" value="5" class="slider-color" id="question2">               
+                </div>
+                <!-- Question 3 -->
+                <label for="question3"><span>3.</span> Em uma escala de 0 a 10, quão bem o sistema de pontos extras funcionou:</label>
+                <div class="range">
+                    <input type="range" name="pontosExtras" min="0" max="10" value="5" class="slider-color" id="question3">               
+                </div>
+                <!-- Question 4 -->
+                <label for="question4"><span>4.</span> Em uma escala de 0 a 10, como você classificaria a jogabilidade do jogo:</label>
+                <div class="range">
+                    <input type="range" name="Jogabilidade" min="0" max="10" value="5" class="slider-color" id="question4">               
+                </div>
+                <!-- Question1 -->
+                <label for="question5"><span>5.</span> Você encontrou bugs no jogo?</label>
+                <div class="feedbackPopUp__questionRadio">
+                    <input type="radio" checked id="Nenhum" name="bugs" value="Nenhum">
+                    <label for="Nenhum">Nenhum</label>
+                    <input type="radio" id="Poucos" name="bugs" value="Poucos">
+                    <label for="Poucos">Poucos</label>
+                    <input type="radio" id="Muitos" name="bugs" value="Muitos">
+                    <label for="Muitos">Muitos</label>
+                    <input type="radio" id="Não sei responder" name="bugs" value="Não sei responder">
+                    <label for="Não sei responder">Não sei responder</label>
+                </div>
+                <button style="margin-top: 20px" class="buttonPopUp" type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+<script type="module" src="./assets/js/comecarJogo.js"></script>
+<script type="module" src="./assets/js/encerrarJogo.js"></script>
+<script type="module" src="./assets/js/pontuacao.js"></script>
+<script type="module" src="./assets/js/obstaculos/colisorObstaculos.js"></script>
+<script type="module" src="./assets/js/obstaculos/randomizerObstaculos.js"></script>
+<script type="module" src="./assets/js/obstaculos/spritesObstaculos.js"></script>
+<script type="module" src="./assets/js/powerUps/colisorPowerups.js"></script>
+<script type="module" src="./assets/js/powerUps/randomizerPowerups.js"></script>
+<script type="module" src="./assets/js/player/movimentacao.js"></script>
+<script type="module" src="./assets/js/player/sprites.js"></script>
+<script type="module" src="./assets/js/nuvem/nuvens.js"></script>
+<script type="module" src="./assets/js/pontosExtras/colisorPontosExtras.js"></script>
+<script type="module" src="./assets/js/formulario/formulario.js"></script>
+<script type="module" src="./assets/js/mensagemPosGameOver.js"></script>
+<script type="module" src="./assets/js/scaleAreaJogo.js"></script>
+<script type="module" src="./assets/js/musica.js"></script>
+<script src="./assets/js/menu/creditos.js"></script>
+

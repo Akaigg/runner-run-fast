@@ -1,0 +1,92 @@
+.sacoDeLixo01, .sacoDeLixo02, .cone, .hidrante, .rato, .pomba, .pedra01, .pedra02, .passarinho, .banco, .tronco, .placaSubwaySurfers{
+	position: absolute;
+	bottom: 8px;
+	width: 50px;
+	height: 50px;
+	right: -50%;
+}
+
+.placaSubwaySurfers{
+	background: url(../../img/obstaculos/PlacaSubwaySurfers00.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 35px;
+}
+
+.tronco{
+	background: url(../../img/obstaculos/Tronco00.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 20px;
+}
+
+.banco{
+	background: url(../../img/obstaculos/Banco00.png);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	bottom: 0;
+}
+
+.pomba, .passarinho{
+	bottom: 40px;
+}
+
+.hidrante img{
+	bottom: 10px;
+	position: absolute;
+	transform: scale(1.5);
+}
+
+.cone img{
+	bottom: 10px;
+	position: absolute;
+	transform: scale(1.3);
+}
+
+@keyframes animacaoObstaculo {
+	0%{
+		right: -10%;
+	}
+	50%{
+		right: 100%;
+	}
+	100%{
+		right: 110%;
+	}
+}
+
+@keyframes pisca {
+	0%{
+		opacity: 1;
+	}
+	10%{
+		opacity: 0;
+	}
+	20%{
+		opacity: 1;
+	}
+	30%{
+		opacity: 0;
+	}
+	40%{
+		opacity: 1;
+	}
+	50%{
+		opacity: 0;
+	}
+	60%{
+		opacity: 1;
+	}
+	70%{
+		opacity: 0;
+	}
+	80%{
+		opacity: 1;
+	}
+	90%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}

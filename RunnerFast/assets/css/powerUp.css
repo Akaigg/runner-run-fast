@@ -1,0 +1,91 @@
+.powerUp--bicicleta, .powerUp--onibus, .powerUp--carroEletrico, .powerUp--caminhada{
+    align-items: center;
+    border-radius: 100%;
+    bottom: 65px;
+    display: flex;
+    flex-direction: column;
+    height: 50px;
+    justify-content: center;
+    position: absolute;
+    right: -10%;
+    width: 50px;
+    color: gold;
+	text-shadow: 4px 4px 15px black;
+    /* animation: powerUpKeyframe 5s infinite linear; */
+}
+
+.powerUp--bicicleta p, .powerUp--onibus p, .powerUp--carroEletrico p, .powerUp--caminhada p{
+    margin: 0;
+}
+
+.powerUp--bicicleta{
+    background-image: url(../img/powerUp/bicicleta.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.powerUp--bicicleta::after{
+    content: 'Bicicleta';
+    position: absolute;
+    margin-bottom: 70px;
+    color: #FFC90E;
+}
+
+.powerUp--onibus{
+    background-image: url(../img/powerUp/onibus.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    color: #5487FF;
+}
+
+.powerUp--onibus::after{
+    content: 'Ônibus';
+    position: absolute;
+    margin-bottom: 80px;
+    color: #E5E5E5;
+}
+
+.powerUp--carroEletrico::after{
+    content: 'Carro Elétrico';
+    position: absolute;
+    margin-bottom: 80px;
+    color: #FFF200;
+}
+
+.powerUp--bicicleta::after, .powerUp--caminhada::after, .powerUp--carroEletrico::after, .powerUp--onibus::after{
+    font-family: 'VT323', monospace;
+    white-space: nowrap;
+    font-size: 24px;
+}
+
+.powerUp--carroEletrico div{
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.powerUp--carroEletrico div img{
+    width: 100%;
+    height: 100%;
+}
+
+.powerUp--caminhada{
+    background-image: url(../img/powerUp/caminhada.png);
+    background-repeat: no-repeat;
+    background-size: 100% 80%;}
+
+.powerUp--caminhada::after{
+    content: 'Caminhada';
+    position: absolute;
+    margin-bottom: 50px;
+    color: whitesmoke;
+}
+
+@keyframes powerUpKeyframe {
+	0%{
+		right: -10%;
+	}
+	100%{
+		right: 100%;
+	}
+}
